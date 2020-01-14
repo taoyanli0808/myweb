@@ -27,17 +27,17 @@
             </el-submenu>
             <el-submenu index="1-4">
               <template slot="title">接口管理</template>
-              <el-menu-item index="1-4-1">创建接口</el-menu-item>
-              <el-menu-item index="1-4-2">管理接口</el-menu-item>
+              <el-menu-item index="/manual/interface/index">管理接口</el-menu-item>
+              <el-menu-item index="/manual/interface/create">创建接口</el-menu-item>
             </el-submenu>
             <el-submenu index="1-5">
               <template slot="title">套件管理</template>
-              <el-menu-item index="1-5-1">创建套件</el-menu-item>
-              <el-menu-item index="1-5-1">管理套件</el-menu-item>
+              <el-menu-item index="/manual/suite/index">管理套件</el-menu-item>
+              <el-menu-item index="/manual/suite/create">创建套件</el-menu-item>
             </el-submenu>
           </el-menu-item-group>
           <el-menu-item-group title="常见问题">
-            <el-menu-item index="1-6">常见问题</el-menu-item>
+            <el-menu-item index="/manual/qa/index">常见问题</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
         <el-menu-item index="2">
