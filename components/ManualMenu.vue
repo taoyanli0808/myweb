@@ -16,19 +16,31 @@
           <el-menu-item-group>
             <template slot="title">部署</template>
             <el-menu-item index="/manual/deploy/linux">linux部署</el-menu-item>
-            <el-menu-item index="/manual/deploy/docker">docker部署</el-menu-item>
+            <el-menu-item index="/manual/deploy/docker"
+              >docker部署</el-menu-item
+            >
           </el-menu-item-group>
           <el-menu-item-group title="使用手册">
             <el-submenu index="1-3">
               <template slot="title">配置管理</template>
-              <el-menu-item index="/manual/environment/config">项目与团队</el-menu-item>
-              <el-menu-item index="/manual/environment/variable">全局变量</el-menu-item>
-              <el-menu-item index="/manual/environment/keyword">全局关键字</el-menu-item>
+              <el-menu-item index="/manual/environment/config"
+                >项目与团队</el-menu-item
+              >
+              <el-menu-item index="/manual/environment/variable"
+                >全局变量</el-menu-item
+              >
+              <el-menu-item index="/manual/environment/keyword"
+                >全局关键字</el-menu-item
+              >
             </el-submenu>
             <el-submenu index="1-4">
               <template slot="title">接口管理</template>
-              <el-menu-item index="/manual/interface/index">管理接口</el-menu-item>
-              <el-menu-item index="/manual/interface/create">创建接口</el-menu-item>
+              <el-menu-item index="/manual/interface/index"
+                >管理接口</el-menu-item
+              >
+              <el-menu-item index="/manual/interface/create"
+                >创建接口</el-menu-item
+              >
             </el-submenu>
             <el-submenu index="1-5">
               <template slot="title">套件管理</template>
@@ -37,21 +49,39 @@
             </el-submenu>
           </el-menu-item-group>
           <el-menu-item-group title="常见问题">
-            <el-menu-item index="/manual/qa/index">常见问题</el-menu-item>
+            <el-menu-item index="/manual/suite/create">常见问题</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
-        <el-menu-item index="2">
-          <i class="el-icon-menu"></i>
-          <span slot="title">python基础</span>
-        </el-menu-item>
-        <el-menu-item index="3">
-          <i class="el-icon-document"></i>
-          <span slot="title">接口测试</span>
-        </el-menu-item>
-        <el-menu-item index="4">
-          <i class="el-icon-setting"></i>
-          <span slot="title">UI自动化</span>
-        </el-menu-item>
+        <el-submenu  index="2">
+          <template slot="title">
+            <i class="el-icon-menu"></i>
+            <span>python基础</span>
+          </template>
+          <el-menu-item index="2">
+            <i class="el-icon-menu"></i>
+            <span slot="title">python基础</span>
+          </el-menu-item>
+        </el-submenu>
+        <el-submenu index="3">
+          <template slot="title">
+            <i class="el-icon-document"></i>
+            <span>接口测试</span>
+          </template>
+          <el-menu-item index="3">
+            <i class="el-icon-document"></i>
+            <span slot="title">接口测试</span>
+          </el-menu-item>
+        </el-submenu>
+        <el-submenu  index="4">
+          <template slot="title">
+            <i class="el-icon-setting"></i>
+            <span>UI自动化</span>
+          </template>
+          <el-menu-item index="4">
+            <i class="el-icon-setting"></i>
+            <span slot="title">UI自动化</span>
+          </el-menu-item>
+        </el-submenu>
       </el-menu>
     </el-col>
   </el-row>
@@ -67,11 +97,11 @@ export default {
       console.log(key, keyPath);
     },
     handleSelect(key, keyPath) {
-      console.log('handleSelect')
+      console.log("handleSelect");
       console.log(key, keyPath);
       this.$router.push({
         path: key
-      })
+      });
     }
   }
 };
