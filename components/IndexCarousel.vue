@@ -26,3 +26,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.block {
+  padding-bottom: 36px;
+}
+</style>

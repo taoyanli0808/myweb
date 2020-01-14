@@ -14,6 +14,9 @@
       <a href="/trial">快速体验</a>
     </el-menu-item>
     <el-menu-item index="4">
+      <a href="/recruit">招聘信息</a>
+    </el-menu-item>
+    <el-menu-item index="5">
       <a href="/about">关于clover</a>
     </el-menu-item>
   </el-menu>

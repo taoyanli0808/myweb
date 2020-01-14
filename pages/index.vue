@@ -1,15 +1,18 @@
 <template>
   <div class="container">
     <IndexCarousel />
+    <IndexIntroduce />
   </div>
 </template>
 
 <script>
 import IndexCarousel from '~/components/IndexCarousel.vue'
+import IndexIntroduce from '~/components/IndexIntroduce.vue'
 
 export default {
   components: {
-    IndexCarousel
+    IndexCarousel,
+    IndexIntroduce
   }
 }
 </script>

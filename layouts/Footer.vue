@@ -3,7 +3,7 @@
     <el-divider />
     <el-row>
       <el-col :span="16">
-        @2019 All Rights Reserved!
+        @2020 All Rights Reserved!
       </el-col>
       <el-col :span="8">
         <i class="el-icon-chat-dot-round">taoyanli0808</i>
