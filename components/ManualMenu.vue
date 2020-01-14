@@ -2,10 +2,11 @@
   <el-row class="tac">
     <el-col :span="24">
       <el-menu
-        default-active="2"
+        default-active="1"
         class="el-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose"
+        @select="handleSelect"
       >
         <el-submenu index="1">
           <template slot="title">
@@ -13,24 +14,28 @@
             <span>用户手册</span>
           </template>
           <el-menu-item-group>
-            <template slot="title">快速上手</template>
-            <el-menu-item index="1-1">linux部署</el-menu-item>
-            <el-menu-item index="1-2">docker部署</el-menu-item>
+            <template slot="title">部署</template>
+            <el-menu-item index="/manual/deploy/linux">linux部署</el-menu-item>
+            <el-menu-item index="/manual/deploy/docker">docker部署</el-menu-item>
           </el-menu-item-group>
-          <el-submenu index="1-3">
-            <template slot="title">配置管理</template>
-            <el-menu-item index="1-3-1">创建项目与团队</el-menu-item>
-            <el-menu-item index="1-3-2">创建全局变量</el-menu-item>
-            <el-menu-item index="1-3-3">创建全局关键字</el-menu-item>
-          </el-submenu>
-          <el-submenu index="1-4">
-            <template slot="title">接口管理</template>
-            <el-menu-item index="1-4-1">选项1</el-menu-item>
-          </el-submenu>
-          <el-submenu index="1-5">
-            <template slot="title">套件管理</template>
-            <el-menu-item index="1-5-1">选项1</el-menu-item>
-          </el-submenu>
+          <el-menu-item-group title="使用手册">
+            <el-submenu index="1-3">
+              <template slot="title">配置管理</template>
+              <el-menu-item index="1-3-1">项目与团队</el-menu-item>
+              <el-menu-item index="1-3-2">全局变量</el-menu-item>
+              <el-menu-item index="1-3-3">全局关键字</el-menu-item>
+            </el-submenu>
+            <el-submenu index="1-4">
+              <template slot="title">接口管理</template>
+              <el-menu-item index="1-4-1">创建接口</el-menu-item>
+              <el-menu-item index="1-4-2">管理接口</el-menu-item>
+            </el-submenu>
+            <el-submenu index="1-5">
+              <template slot="title">套件管理</template>
+              <el-menu-item index="1-5-1">创建套件</el-menu-item>
+              <el-menu-item index="1-5-1">管理套件</el-menu-item>
+            </el-submenu>
+          </el-menu-item-group>
           <el-menu-item-group title="常见问题">
             <el-menu-item index="1-6">常见问题</el-menu-item>
           </el-menu-item-group>
@@ -60,6 +65,13 @@ export default {
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath);
+    },
+    handleSelect(key, keyPath) {
+      console.log('handleSelect')
+      console.log(key, keyPath);
+      this.$router.push({
+        path: key
+      })
     }
   }
 };
