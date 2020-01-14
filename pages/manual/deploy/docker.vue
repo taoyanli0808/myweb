@@ -138,6 +138,7 @@ export default {
 
 .title {
   padding-bottom: 20px;
+  font-size: 36px;
 }
 
 .timeline {
