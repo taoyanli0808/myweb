@@ -21,9 +21,9 @@
           <el-menu-item-group title="使用手册">
             <el-submenu index="1-3">
               <template slot="title">配置管理</template>
-              <el-menu-item index="1-3-1">项目与团队</el-menu-item>
-              <el-menu-item index="1-3-2">全局变量</el-menu-item>
-              <el-menu-item index="1-3-3">全局关键字</el-menu-item>
+              <el-menu-item index="/manual/environment/config">项目与团队</el-menu-item>
+              <el-menu-item index="/manual/environment/variable">全局变量</el-menu-item>
+              <el-menu-item index="/manual/environment/keyword">全局关键字</el-menu-item>
             </el-submenu>
             <el-submenu index="1-4">
               <template slot="title">接口管理</template>
